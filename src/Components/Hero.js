@@ -7,9 +7,11 @@ import Footer from './Footer';
 import LoadingBar from 'react-top-loading-bar';
 
 export default function Hero() {
+	// Use states
 	const apiKey = '8e51bb8a1eb99116e29d35a4229f429d';
 	const [inputCity, setInputCity] = useState('');
 	const [data, setData] = useState({});
+	// Seeting progress loading bar's initial value to 0
 	const [progress, setProgress] = useState(0);
 	const mydate = new Date().toDateString();
 	const [time, setTime] = useState(new Date());
@@ -23,30 +25,42 @@ export default function Hero() {
 			apiKey;
 
 		axios
+			// Seeting progress loading bar's initial value to 20
+
 			.get(apiUrl, setProgress(progress + 20))
 
 			.then((res) => {
 				console.log('response', res.data);
 				setData(res.data);
+
+				// Seeting progress loading bar's initial value to 100
 				setProgress(progress + 100);
 			})
 			.catch((err) => {
+				// handling Error by console logging it
 				console.log('err', err);
 			});
+
+		// Seeting progress loading bar's initial value to 70
 		setProgress(progress + 70);
 	};
 	const handleChangeInput = (e) => {
 		setInputCity(e.target.value);
 	};
+
 	const handleSearch = () => {
 		getWeatherData(inputCity);
-	};
 
+		// Empty Input bar after hitting search
+		setInputCity('');
+	};
 	useEffect(() => {
+		// change time every second
 		const interval = setInterval(() => {
 			setTime(new Date());
 		}, 1000);
 
+		// Setting default location == bangalore
 		getWeatherData('Bangalore');
 		return () => clearInterval(interval);
 	}, []);
