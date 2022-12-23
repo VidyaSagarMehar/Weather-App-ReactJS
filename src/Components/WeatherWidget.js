@@ -49,6 +49,12 @@ export default function WeatherWidget(props) {
 					</div>
 					<span className="font-bold text-7xl mt-4">{props.temp}°c</span>
 				</div>
+				<div className="text-end">
+					<span>{props.mydate}</span>
+				</div>
+				<div className="text-end">
+					<span>{props.mytime}</span>
+				</div>
 				<div className="flex justify-between mt-8 space-x-4 dark:text-gray-400">
 					<div className="flex flex-col items-center space-y-1">
 						<span className="">Min Temp</span>

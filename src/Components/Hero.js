@@ -11,6 +11,8 @@ export default function Hero() {
 	const [inputCity, setInputCity] = useState('');
 	const [data, setData] = useState({});
 	const [progress, setProgress] = useState(0);
+	const mydate = new Date().toDateString();
+	const [time, setTime] = useState(new Date());
 
 	const getWeatherData = (cityName) => {
 		if (!cityName) return;
@@ -41,7 +43,12 @@ export default function Hero() {
 	};
 
 	useEffect(() => {
+		const interval = setInterval(() => {
+			setTime(new Date());
+		}, 1000);
+
 		getWeatherData('Bangalore');
+		return () => clearInterval(interval);
 	}, []);
 	return (
 		<>
@@ -64,6 +71,8 @@ export default function Hero() {
 				min={(data?.main?.temp_min - 273.15).toFixed(1)}
 				temp={(data?.main?.temp - 273.15).toFixed(1)}
 				name={data?.name}
+				mydate={mydate}
+				mytime={time.toLocaleTimeString()}
 			/>
 
 			<Footer />
