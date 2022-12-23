@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WeatherWidget(props) {
 	return (
-		<div className="ml-auto mt-28" style={{ height: '60vh' }}>
+		<div className="ml-auto mt" style={{ height: '60vh' }}>
 			<div className="max-w-md p-8 mx-auto rounded-lg dark:bg-gray-900 dark:text-gray-100">
 				<div className="flex justify-between space-x-8">
 					<div className="flex flex-col items-center">

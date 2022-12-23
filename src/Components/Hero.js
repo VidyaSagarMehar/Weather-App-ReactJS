@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react';
 import WeatherWidget from './WeatherWidget';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import LoadingBar from 'react-top-loading-bar';
 
 export default function Hero() {
 	const apiKey = '8e51bb8a1eb99116e29d35a4229f429d';
 	const [inputCity, setInputCity] = useState('');
 	const [data, setData] = useState({});
+	const [progress, setProgress] = useState(0);
 
 	const getWeatherData = (cityName) => {
 		if (!cityName) return;
@@ -19,14 +21,17 @@ export default function Hero() {
 			apiKey;
 
 		axios
-			.get(apiUrl)
+			.get(apiUrl, setProgress(progress + 20))
+
 			.then((res) => {
 				console.log('response', res.data);
 				setData(res.data);
+				setProgress(progress + 100);
 			})
 			.catch((err) => {
 				console.log('err', err);
 			});
+		setProgress(progress + 70);
 	};
 	const handleChangeInput = (e) => {
 		setInputCity(e.target.value);
@@ -46,6 +51,12 @@ export default function Hero() {
 				handleChangeInput={handleChangeInput}
 			/>
 
+			<LoadingBar
+				color="#FACC15"
+				progress={progress}
+				onLoaderFinished={() => setProgress(0)}
+			/>
+
 			<WeatherWidget
 				visibility={data?.visibility}
 				humidity={data?.main?.humidity}
@@ -54,6 +65,7 @@ export default function Hero() {
 				temp={(data?.main?.temp - 273.15).toFixed(1)}
 				name={data?.name}
 			/>
+
 			<Footer />
 		</>
 	);

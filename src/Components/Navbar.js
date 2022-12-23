@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Navbar(props) {
 	return (
-		<section style={{ height: '15vh' }}>
+		<section style={{ height: '20vh' }}>
 			<header className="dark:bg-gray-900 dark:text-gray-100">
 				<div className="container flex justify-between h-16 mx-auto">
 					<a
