@@ -1,3 +1,51 @@
+# Hi, I'm [Vidya Sagar Mehar](https://vidya-sagar-portfolio.netlify.app/) ! 👋
+
+
+## 🚀 I'm a FullStack developer...
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+## Project Title - Weather App
+A React project which shows the current weather of input location and by default it shows the weather of "Bangalore"
+
+## Average time to complete
+#### 4 hrs
+## Lessons Learned
+
+![](https://img.shields.io/badge/api-Axios-black)
+![](https://img.shields.io/badge/React-TopLoadingBar-black)
+
+## Technology Used
+
+![HTML](https://img.shields.io/badge/FirstTech-React-black)
+![HTML](https://img.shields.io/badge/SecondTech-Tailwind-black)
+![HTML](https://img.shields.io/badge/ThirdTech-JavaScript-black)
+
+## 🛠 Skills
+ReactJS, Tailwid
+
+## Demo | vercel
+https://weather-app-react-js-omega.vercel.app/
+
+
+## Screenshots
+![](./src/Screenshot_20221223_070959.png)
+![](./src/Screenshot_20221226_054525.png)
+
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at vidyasagark890@gmail.com
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vidya-sagar-portfolio.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/Cherry_Reyans)
+[![portfolio](https://img.shields.io/badge/FindCoder_portfolio-5A20CB??style=for-the-badge&logo=appveyor)](https://www.findcoder.io/u/vidyasagarmehar)
+
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
