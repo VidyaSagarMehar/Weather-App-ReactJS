@@ -27,11 +27,11 @@ ReactJS, Tailwid
 https://weather-app-react-js-omega.vercel.app/
 
 
-## Screenshots
-![](./src/Screenshot_20221223_070959.png)
-![](./src/Screenshot_20221226_054525.png)
+## Mobile view
+![Screenshot_20221223_070959](https://user-images.githubusercontent.com/92782806/211467998-6b34205d-2a8c-479b-b0d9-c430ad55cf65.png)
 
-
+## Web view
+![Screenshot_20221226_054525](https://user-images.githubusercontent.com/92782806/211468041-3e3a6090-6ac7-424b-a0c6-f05b2219d0ba.png)
 
 ## Feedback
 
